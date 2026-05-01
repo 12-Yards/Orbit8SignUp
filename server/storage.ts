@@ -139,12 +139,14 @@ export class DatabaseStorage implements IStorage {
 
   async ensureDefaultSubscription(): Promise<Subscription> {
     const seedItems: { key: string; name: string; description: string }[] = [
-      { key: "member-communication", name: "Member Communication & Social Networking", description: "Connect your community with messaging, feeds, and social features." },
-      { key: "groups-communities", name: "Groups & Communities", description: "Organize members into focused groups and sub-communities." },
-      { key: "events-competitions", name: "Events & Competitions", description: "Run events, tournaments, and competitions with full management tools." },
-      { key: "reciprocal-play", name: "Reciprocal Play Management", description: "Manage tee time offers and reciprocal play between clubs." },
-      { key: "content-publishing", name: "Content Publishing & News", description: "Publish news, articles, and announcements to your community." },
-      { key: "analytics-reporting", name: "Analytics & Reporting", description: "Data-driven insights into community engagement and activity." },
+      { key: "events-standard", name: "Events (Standard)", description: "Standard events functionality." },
+      { key: "events-competitions", name: "Events (Competitions)", description: "Competition events functionality." },
+      { key: "add-reviews", name: "Add Reviews", description: "Allow members to add reviews." },
+      { key: "communities", name: "Communities", description: "Community groups functionality." },
+      { key: "connections", name: "Connections", description: "Member-to-member connections." },
+      { key: "play", name: "Play", description: "Play functionality." },
+      { key: "play-add-request", name: "Play (Add Request)", description: "Allow members to add play requests." },
+      { key: "suggest-event", name: "Suggest Event", description: "Allow members to suggest events." },
     ];
 
     for (const seed of seedItems) {
