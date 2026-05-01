@@ -1,0 +1,79 @@
+oot@ubuntu:/var/www/orbit8 (main)# pm2 logs orbit8.io --lines 100
+[TAILING] Tailing last 100 lines for [orbit8.io] process (change the value with --lines option)
+/root/.pm2/logs/orbit8.io-out.log last 100 lines:
+/root/.pm2/logs/orbit8.io-error.log last 100 lines:
+46|orbit8. | error: relation "subscription_items" does not exist
+46|orbit8. |     at /var/www/orbit8/dist/index.cjs:68:13326
+46|orbit8. |     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+46|orbit8. |     at async /var/www/orbit8/dist/index.cjs:80:98254
+46|orbit8. |     at async gf.ensureDefaultSubscription (/var/www/orbit8/dist/index.cjs:80:103694)
+46|orbit8. |     at async aC (/var/www/orbit8/dist/index.cjs:88:167)
+46|orbit8. |     at async /var/www/orbit8/dist/index.cjs:88:7422 {
+46|orbit8. |   length: 117,
+46|orbit8. |   severity: 'ERROR',
+46|orbit8. |   code: '42P01',
+46|orbit8. |   detail: undefined,
+46|orbit8. |   hint: undefined,
+46|orbit8. |   position: '48',
+46|orbit8. |   internalPosition: undefined,
+46|orbit8. |   internalQuery: undefined,
+46|orbit8. |   where: undefined,
+46|orbit8. |   schema: undefined,
+46|orbit8. |   table: undefined,
+46|orbit8. |   column: undefined,
+46|orbit8. |   dataType: undefined,
+46|orbit8. |   constraint: undefined,
+46|orbit8. |   file: 'parse_relation.c',
+46|orbit8. |   line: '1449',
+46|orbit8. |   routine: 'parserOpenTable'
+46|orbit8. | }
+46|orbit8. | error: relation "subscription_items" does not exist
+46|orbit8. |     at /var/www/orbit8/dist/index.cjs:68:13326
+46|orbit8. |     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+46|orbit8. |     at async /var/www/orbit8/dist/index.cjs:80:98254
+46|orbit8. |     at async gf.ensureDefaultSubscription (/var/www/orbit8/dist/index.cjs:80:103694)
+46|orbit8. |     at async aC (/var/www/orbit8/dist/index.cjs:88:167)
+46|orbit8. |     at async /var/www/orbit8/dist/index.cjs:88:7422 {
+46|orbit8. |   length: 117,
+46|orbit8. |   severity: 'ERROR',
+46|orbit8. |   code: '42P01',
+46|orbit8. |   detail: undefined,
+46|orbit8. |   hint: undefined,
+46|orbit8. |   position: '48',
+46|orbit8. |   internalPosition: undefined,
+46|orbit8. |   internalQuery: undefined,
+46|orbit8. |   where: undefined,
+46|orbit8. |   schema: undefined,
+46|orbit8. |   table: undefined,
+46|orbit8. |   column: undefined,
+46|orbit8. |   dataType: undefined,
+46|orbit8. |   constraint: undefined,
+46|orbit8. |   file: 'parse_relation.c',
+46|orbit8. |   line: '1449',
+46|orbit8. |   routine: 'parserOpenTable'
+46|orbit8. | }
+46|orbit8. | error: relation "subscription_items" does not exist
+46|orbit8. |     at /var/www/orbit8/dist/index.cjs:68:13326
+46|orbit8. |     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+46|orbit8. |     at async /var/www/orbit8/dist/index.cjs:80:98254
+46|orbit8. |     at async gf.ensureDefaultSubscription (/var/www/orbit8/dist/index.cjs:80:103694)
+46|orbit8. |     at async aC (/var/www/orbit8/dist/index.cjs:88:167)
+46|orbit8. |     at async /var/www/orbit8/dist/index.cjs:88:7422 {
+46|orbit8. |   length: 117,
+46|orbit8. |   severity: 'ERROR',
+46|orbit8. |   code: '42P01',
+46|orbit8. |   detail: undefined,
+46|orbit8. |   hint: undefined,
+46|orbit8. |   position: '48',
+46|orbit8. |   internalPosition: undefined,
+46|orbit8. |   internalQuery: undefined,
+46|orbit8. |   where: undefined,
+46|orbit8. |   schema: undefined,
+46|orbit8. |   table: undefined,
+46|orbit8. |   column: undefined,
+46|orbit8. |   dataType: undefined,
+46|orbit8. |   constraint: undefined,
+46|orbit8. |   file: 'parse_relation.c',
+46|orbit8. |   line: '1449',
+46|orbit8. |   routine: 'parserOpenTable'
+46|orbit8. | }

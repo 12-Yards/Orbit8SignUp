@@ -49,12 +49,23 @@ export class DatabaseStorage implements IStorage {
   }
 
   async createRegistration(reg: InsertRegistration): Promise<Registration> {
-    const defaultSub = await this.getDefaultSubscription();
-    const [result] = await db.insert(registrations).values({
-      ...reg,
-      subscriptionId: defaultSub?.id ?? null,
-    }).returning();
-    return result;
+    let subscriptionId: number | null = null;
+    try {
+      const defaultSub = await this.getDefaultSubscription();
+      subscriptionId = defaultSub?.id ?? null;
+    } catch (err) {
+      console.error("[createRegistration] Could not load default subscription:", (err as Error).message);
+    }
+    try {
+      const [result] = await db.insert(registrations).values({
+        ...reg,
+        subscriptionId,
+      }).returning();
+      return result;
+    } catch (err) {
+      const [result] = await db.insert(registrations).values(reg).returning();
+      return result;
+    }
   }
 
   async getRegistrations(): Promise<Registration[]> {

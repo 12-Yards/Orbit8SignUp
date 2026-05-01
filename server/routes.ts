@@ -43,7 +43,11 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
   await ensureSessionTable();
-  await storage.ensureDefaultSubscription();
+  try {
+    await storage.ensureDefaultSubscription();
+  } catch (err) {
+    console.error("[startup] Failed to ensure default subscription (continuing without it):", (err as Error).message);
+  }
   const isProduction = process.env.NODE_ENV === "production";
   if (isProduction) {
     app.set("trust proxy", 1);
