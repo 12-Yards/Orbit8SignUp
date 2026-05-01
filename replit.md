@@ -6,6 +6,9 @@ Orbit8 is a community management platform designed for clubs and communities. Th
 
 ## Recent Changes
 
+- **March 2026**: Copy tweaks:
+  - Changed features section heading "Build a Thriving Online Community" to "Build a thriving online community" (lowercase) on the home page
+  - Changed CTA button text "Start Free Trial" to "Go Live Now" across home, feature, and benefit pages
 - **March 2026**: Migrated to Replit environment with security hardening:
   - Admin credentials moved from hardcoded values to secure environment secrets (ADMIN_PASSWORD)
   - API response body logging removed to prevent sensitive data leakage
@@ -68,6 +71,7 @@ Orbit8 is a community management platform designed for clubs and communities. Th
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Change logging: Log all changes (including small copy/text tweaks) in the Recent Changes section.
 
 ## System Architecture
 
