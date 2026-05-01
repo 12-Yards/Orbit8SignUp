@@ -147,8 +147,13 @@ export async function registerRoutes(
     if (!email) {
       return res.status(400).json({ message: "Email is required" });
     }
-    const exists = await storage.checkEmailExists(email.trim().toLowerCase());
-    return res.json({ exists });
+    try {
+      const exists = await storage.checkEmailExists(email.trim().toLowerCase());
+      return res.json({ exists });
+    } catch (err) {
+      console.error("[check-email] Database error:", err);
+      return res.status(500).json({ message: "Database error", error: (err as Error).message });
+    }
   });
 
   app.post("/api/check-domain", async (req: Request, res: Response) => {
@@ -156,8 +161,13 @@ export async function registerRoutes(
     if (!domainName) {
       return res.status(400).json({ message: "Domain name is required" });
     }
-    const exists = await storage.checkDomainExists(domainName.trim().toLowerCase());
-    return res.json({ exists });
+    try {
+      const exists = await storage.checkDomainExists(domainName.trim().toLowerCase());
+      return res.json({ exists });
+    } catch (err) {
+      console.error("[check-domain] Database error:", err);
+      return res.status(500).json({ message: "Database error", error: (err as Error).message });
+    }
   });
 
   app.delete("/api/admin/registrations/:id", requireAdmin, async (req: Request, res: Response) => {
