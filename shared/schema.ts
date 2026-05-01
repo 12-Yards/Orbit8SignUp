@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, serial, timestamp, boolean, integer, primaryKey } from "drizzle-orm/pg-core";
+import { pgTable, text, varchar, serial, timestamp, boolean } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -30,7 +30,6 @@ export const registrations = pgTable("registrations", {
   secondaryColor: text("secondary_color"),
   platformUrl: text("platform_url"),
   adminUrl: text("admin_url"),
-  subscriptionId: integer("subscription_id"),
   isRead: boolean("is_read").default(false).notNull(),
   createdAt: timestamp("created_at").defaultNow(),
 });
@@ -39,49 +38,10 @@ export const insertRegistrationSchema = createInsertSchema(registrations).omit({
   id: true,
   isRead: true,
   createdAt: true,
-  subscriptionId: true,
 });
 
 export type InsertRegistration = z.infer<typeof insertRegistrationSchema>;
 export type Registration = typeof registrations.$inferSelect;
-
-export const subscriptions = pgTable("subscriptions", {
-  id: serial("id").primaryKey(),
-  name: text("name").notNull().unique(),
-  isDefault: boolean("is_default").default(false).notNull(),
-  createdAt: timestamp("created_at").defaultNow(),
-});
-
-export const insertSubscriptionSchema = createInsertSchema(subscriptions).omit({
-  id: true,
-  createdAt: true,
-});
-
-export type InsertSubscription = z.infer<typeof insertSubscriptionSchema>;
-export type Subscription = typeof subscriptions.$inferSelect;
-
-export const subscriptionItems = pgTable("subscription_items", {
-  id: serial("id").primaryKey(),
-  key: text("key").notNull().unique(),
-  name: text("name").notNull(),
-  description: text("description"),
-});
-
-export const insertSubscriptionItemSchema = createInsertSchema(subscriptionItems).omit({
-  id: true,
-});
-
-export type InsertSubscriptionItem = z.infer<typeof insertSubscriptionItemSchema>;
-export type SubscriptionItem = typeof subscriptionItems.$inferSelect;
-
-export const subscriptionPlanItems = pgTable("subscription_plan_items", {
-  subscriptionId: integer("subscription_id").notNull().references(() => subscriptions.id, { onDelete: "cascade" }),
-  subscriptionItemId: integer("subscription_item_id").notNull().references(() => subscriptionItems.id, { onDelete: "cascade" }),
-}, (table) => ({
-  pk: primaryKey({ columns: [table.subscriptionId, table.subscriptionItemId] }),
-}));
-
-export type SubscriptionPlanItem = typeof subscriptionPlanItems.$inferSelect;
 
 export const contactSubmissions = pgTable("contact_submissions", {
   id: serial("id").primaryKey(),

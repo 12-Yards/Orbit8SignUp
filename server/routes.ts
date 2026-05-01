@@ -43,11 +43,6 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
   await ensureSessionTable();
-  try {
-    await storage.ensureDefaultSubscription();
-  } catch (err) {
-    console.error("[startup] Failed to ensure default subscription (continuing without it):", (err as Error).message);
-  }
   const isProduction = process.env.NODE_ENV === "production";
   if (isProduction) {
     app.set("trust proxy", 1);
@@ -112,18 +107,6 @@ export async function registerRoutes(
     return res.json(registrations);
   });
 
-  app.get("/api/admin/subscriptions", requireAdmin, async (_req: Request, res: Response) => {
-    const subs = await storage.getSubscriptions();
-    const items = await storage.getSubscriptionItems();
-    const withItems = await Promise.all(
-      subs.map(async (s) => ({
-        ...s,
-        items: await storage.getSubscriptionItemsForPlan(s.id),
-      }))
-    );
-    return res.json({ subscriptions: withItems, allItems: items });
-  });
-
   app.get("/api/admin/registrations/:id", requireAdmin, async (req: Request, res: Response) => {
     const id = parseInt(req.params.id as string);
     const registration = await storage.getRegistration(id);
@@ -151,13 +134,8 @@ export async function registerRoutes(
     if (!email) {
       return res.status(400).json({ message: "Email is required" });
     }
-    try {
-      const exists = await storage.checkEmailExists(email.trim().toLowerCase());
-      return res.json({ exists });
-    } catch (err) {
-      console.error("[check-email] Database error:", err);
-      return res.status(500).json({ message: "Database error", error: (err as Error).message });
-    }
+    const exists = await storage.checkEmailExists(email.trim().toLowerCase());
+    return res.json({ exists });
   });
 
   app.post("/api/check-domain", async (req: Request, res: Response) => {
@@ -165,13 +143,8 @@ export async function registerRoutes(
     if (!domainName) {
       return res.status(400).json({ message: "Domain name is required" });
     }
-    try {
-      const exists = await storage.checkDomainExists(domainName.trim().toLowerCase());
-      return res.json({ exists });
-    } catch (err) {
-      console.error("[check-domain] Database error:", err);
-      return res.status(500).json({ message: "Database error", error: (err as Error).message });
-    }
+    const exists = await storage.checkDomainExists(domainName.trim().toLowerCase());
+    return res.json({ exists });
   });
 
   app.delete("/api/admin/registrations/:id", requireAdmin, async (req: Request, res: Response) => {
