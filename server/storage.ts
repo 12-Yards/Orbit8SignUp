@@ -2,7 +2,9 @@ import {
   type User, type InsertUser,
   type Registration, type InsertRegistration,
   type ContactSubmission, type InsertContact,
+  type Subscription, type SubscriptionItem,
   users, registrations, contactSubmissions,
+  subscriptions, subscriptionItems, subscriptionPlanItems,
 } from "@shared/schema";
 import { db } from "./db";
 import { eq, desc, or } from "drizzle-orm";
@@ -23,6 +25,11 @@ export interface IStorage {
   deleteRegistration(id: number): Promise<boolean>;
   markRegistrationRead(id: number): Promise<Registration | undefined>;
   markContactRead(id: number): Promise<ContactSubmission | undefined>;
+  getDefaultSubscription(): Promise<Subscription | undefined>;
+  getSubscriptions(): Promise<Subscription[]>;
+  getSubscriptionItems(): Promise<SubscriptionItem[]>;
+  getSubscriptionItemsForPlan(subscriptionId: number): Promise<SubscriptionItem[]>;
+  ensureDefaultSubscription(): Promise<Subscription>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -42,7 +49,11 @@ export class DatabaseStorage implements IStorage {
   }
 
   async createRegistration(reg: InsertRegistration): Promise<Registration> {
-    const [result] = await db.insert(registrations).values(reg).returning();
+    const defaultSub = await this.getDefaultSubscription();
+    const [result] = await db.insert(registrations).values({
+      ...reg,
+      subscriptionId: defaultSub?.id ?? null,
+    }).returning();
     return result;
   }
 
@@ -102,6 +113,67 @@ export class DatabaseStorage implements IStorage {
   async markContactRead(id: number): Promise<ContactSubmission | undefined> {
     const [result] = await db.update(contactSubmissions).set({ isRead: true }).where(eq(contactSubmissions.id, id)).returning();
     return result;
+  }
+
+  async getDefaultSubscription(): Promise<Subscription | undefined> {
+    const [result] = await db.select().from(subscriptions).where(eq(subscriptions.isDefault, true));
+    return result;
+  }
+
+  async getSubscriptions(): Promise<Subscription[]> {
+    return db.select().from(subscriptions).orderBy(desc(subscriptions.isDefault), subscriptions.name);
+  }
+
+  async getSubscriptionItems(): Promise<SubscriptionItem[]> {
+    return db.select().from(subscriptionItems).orderBy(subscriptionItems.name);
+  }
+
+  async getSubscriptionItemsForPlan(subscriptionId: number): Promise<SubscriptionItem[]> {
+    const rows = await db
+      .select({ item: subscriptionItems })
+      .from(subscriptionPlanItems)
+      .innerJoin(subscriptionItems, eq(subscriptionItems.id, subscriptionPlanItems.subscriptionItemId))
+      .where(eq(subscriptionPlanItems.subscriptionId, subscriptionId));
+    return rows.map((r) => r.item);
+  }
+
+  async ensureDefaultSubscription(): Promise<Subscription> {
+    const seedItems: { key: string; name: string; description: string }[] = [
+      { key: "member-communication", name: "Member Communication & Social Networking", description: "Connect your community with messaging, feeds, and social features." },
+      { key: "groups-communities", name: "Groups & Communities", description: "Organize members into focused groups and sub-communities." },
+      { key: "events-competitions", name: "Events & Competitions", description: "Run events, tournaments, and competitions with full management tools." },
+      { key: "reciprocal-play", name: "Reciprocal Play Management", description: "Manage tee time offers and reciprocal play between clubs." },
+      { key: "content-publishing", name: "Content Publishing & News", description: "Publish news, articles, and announcements to your community." },
+      { key: "analytics-reporting", name: "Analytics & Reporting", description: "Data-driven insights into community engagement and activity." },
+    ];
+
+    for (const seed of seedItems) {
+      const [existing] = await db.select().from(subscriptionItems).where(eq(subscriptionItems.key, seed.key));
+      if (!existing) {
+        await db.insert(subscriptionItems).values(seed);
+      }
+    }
+
+    let [defaultSub] = await db.select().from(subscriptions).where(eq(subscriptions.isDefault, true));
+    if (!defaultSub) {
+      const [created] = await db.insert(subscriptions).values({ name: "Default", isDefault: true }).returning();
+      defaultSub = created;
+    }
+
+    const allItems = await db.select().from(subscriptionItems);
+    const existingLinks = await db
+      .select()
+      .from(subscriptionPlanItems)
+      .where(eq(subscriptionPlanItems.subscriptionId, defaultSub.id));
+    const linkedIds = new Set(existingLinks.map((l) => l.subscriptionItemId));
+    const toAdd = allItems
+      .filter((item) => !linkedIds.has(item.id))
+      .map((item) => ({ subscriptionId: defaultSub.id, subscriptionItemId: item.id }));
+    if (toAdd.length > 0) {
+      await db.insert(subscriptionPlanItems).values(toAdd);
+    }
+
+    return defaultSub;
   }
 }
 

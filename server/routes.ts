@@ -43,6 +43,7 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
   await ensureSessionTable();
+  await storage.ensureDefaultSubscription();
   const isProduction = process.env.NODE_ENV === "production";
   if (isProduction) {
     app.set("trust proxy", 1);
@@ -105,6 +106,18 @@ export async function registerRoutes(
   app.get("/api/admin/registrations", requireAdmin, async (_req: Request, res: Response) => {
     const registrations = await storage.getRegistrations();
     return res.json(registrations);
+  });
+
+  app.get("/api/admin/subscriptions", requireAdmin, async (_req: Request, res: Response) => {
+    const subs = await storage.getSubscriptions();
+    const items = await storage.getSubscriptionItems();
+    const withItems = await Promise.all(
+      subs.map(async (s) => ({
+        ...s,
+        items: await storage.getSubscriptionItemsForPlan(s.id),
+      }))
+    );
+    return res.json({ subscriptions: withItems, allItems: items });
   });
 
   app.get("/api/admin/registrations/:id", requireAdmin, async (req: Request, res: Response) => {
