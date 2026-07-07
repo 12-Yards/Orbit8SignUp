@@ -6,6 +6,7 @@ Tribal18 (formerly Orbit8) is a community management platform designed for clubs
 
 ## Recent Changes
 
+- **July 2026**: Removed "Learn more" links from the feature tiles and removed the 6 feature detail pages entirely (deleted client/src/pages/feature.tsx and the /features/:slug route); feature tiles are no longer clickable
 - **July 2026**: Feature tiles now use the hero "Management" sky blue: card backgrounds tinted translucent sky blue (bg-sky-500/10, sky border) and icon chips in brighter sky blue (bg-sky-500/20, text-sky-400); the first attempt used dark-mode sky-950 which looked black on the dark theme
 - **July 2026**: Changed the favicon to the Tribal18 logo icon (replaced client/public/favicon.png with a 128x128 version of the golfer emblem; existing favicon links in index.html unchanged)
 - **July 2026**: Removed the "Launch your community now" CTA section from the home page
@@ -101,7 +102,7 @@ Change logging: Log all changes (including small copy/text tweaks) in the Recent
 - **Color Theme**: Blue (#0ea5e9 sky) and Green (#22c55e emerald) for branding
 
 The frontend follows a component-based architecture with:
-- Pages in `client/src/pages/` (home.tsx, login.tsx, create-account.tsx, contact.tsx, feature.tsx, benefit.tsx, admin.tsx, admin-login.tsx, not-found.tsx)
+- Pages in `client/src/pages/` (home.tsx, login.tsx, create-account.tsx, contact.tsx, benefit.tsx, admin.tsx, admin-login.tsx, not-found.tsx)
 - Reusable UI components in `client/src/components/ui/`
 - Custom hooks in `client/src/hooks/`
 - Utility functions and query client in `client/src/lib/`
@@ -113,9 +114,7 @@ The frontend follows a component-based architecture with:
 - `/contact` - Contact page (form with Organisation, Name, Email, Mobile, Notes, data saved to DB)
 - `/admin/login` - Admin login page (username: admin)
 - `/admin` - Admin dashboard (view registrations and contact submissions, edit Platform/Admin URLs)
-- `/features/:slug` - Feature detail pages (6 total)
 - `/benefits/:slug` - Benefit detail pages (5 total)
-- Feature slugs: member-communication, groups-communities, events-competitions, reciprocal-play, content-publishing, analytics-reporting
 - Benefit slugs: member-engagement, simplify-management, inter-club-play, revenue-streams, improve-retention
 
 ### Backend Architecture

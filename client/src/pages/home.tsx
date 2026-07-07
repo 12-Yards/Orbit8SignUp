@@ -275,22 +275,15 @@ function FeaturesSection() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, i) => (
-            <Link href={`/features/${feature.slug}`} key={i} data-testid={`link-feature-${i}`}>
-              <Card className="group hover-elevate bg-sky-500/10 border-sky-500/25 transition-all duration-300 h-full cursor-pointer" data-testid={`card-feature-${i}`}>
-                <CardContent className="p-6 h-full flex flex-col">
-                  <div className={`w-14 h-14 rounded-xl mb-5 flex items-center justify-center ${feature.colorClass} shadow-sm`}>
-                    <feature.icon className="w-7 h-7" />
-                  </div>
-                  <h3 className="font-bold text-lg mb-3" data-testid={`heading-feature-${i}`}>{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-1" data-testid={`text-feature-${i}`}>{feature.description}</p>
-                  <div className="mt-4 pt-4 border-t border-border/50">
-                    <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400 flex items-center gap-1 group-hover:gap-2 transition-all" data-testid={`link-learn-more-${i}`}>
-                      Learn more <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+            <Card key={i} className="bg-sky-500/10 border-sky-500/25 h-full" data-testid={`card-feature-${i}`}>
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className={`w-14 h-14 rounded-xl mb-5 flex items-center justify-center ${feature.colorClass} shadow-sm`}>
+                  <feature.icon className="w-7 h-7" />
+                </div>
+                <h3 className="font-bold text-lg mb-3" data-testid={`heading-feature-${i}`}>{feature.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed flex-1" data-testid={`text-feature-${i}`}>{feature.description}</p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
