@@ -6,7 +6,7 @@ Tribal18 (formerly Orbit8) is a community management platform designed for clubs
 
 ## Recent Changes
 
-- **July 2026**: Feature tile icons now all use the hero "Management" sky blue (previously alternated emerald/sky)
+- **July 2026**: Feature tiles now use the hero "Management" sky blue: card backgrounds tinted translucent sky blue (bg-sky-500/10, sky border) and icon chips in brighter sky blue (bg-sky-500/20, text-sky-400); the first attempt used dark-mode sky-950 which looked black on the dark theme
 - **July 2026**: Changed the favicon to the Tribal18 logo icon (replaced client/public/favicon.png with a 128x128 version of the golfer emblem; existing favicon links in index.html unchanged)
 - **July 2026**: Removed the "Launch your community now" CTA section from the home page
 - **July 2026**: Updated site logo to the icon-only Tribal18 emblem (golfer/flag, no wordmark, attached_assets/tribal8icon_1783436350353.png), replacing the earlier logo-with-text version across all pages (header, footer, hero mockup, login, create-account, contact, feature, benefit)

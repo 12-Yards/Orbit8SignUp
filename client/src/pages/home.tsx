@@ -191,42 +191,42 @@ function FeaturesSection() {
       icon: MessageCircle,
       title: "Member Communication & Social Networking",
       description: "Enable members to connect, message, comment, post, and compete inside a private community network.",
-      colorClass: "bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400",
+      colorClass: "bg-sky-500/20 text-sky-400",
       slug: "member-communication"
     },
     {
       icon: Users,
       title: "Groups & Communities",
       description: "Create regional groups, interest-based groups, trip groups, and societies so members can easily organise away days, trips, and regular meetups.",
-      colorClass: "bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400",
+      colorClass: "bg-sky-500/20 text-sky-400",
       slug: "groups-communities"
     },
     {
       icon: Calendar,
       title: "Events & Competition Management",
       description: "Create and manage meet-ups, leagues, knockout tournaments, team competitions, and practice sessions with ease.",
-      colorClass: "bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400",
+      colorClass: "bg-sky-500/20 text-sky-400",
       slug: "events-competitions"
     },
     {
       icon: Globe,
       title: "Tee Time Offers & Reciprocal Play Requests",
       description: "Allow members to offer availability or request reciprocal access at other clubs and regions. Discover new venues and meet new members effortlessly.",
-      colorClass: "bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400",
+      colorClass: "bg-sky-500/20 text-sky-400",
       slug: "reciprocal-play"
     },
     {
       icon: FileText,
       title: "Content Publishing & Insights",
       description: "Share news, articles, coaching tips, and community updates. Track engagement and allow members to publish articles or opinion pieces.",
-      colorClass: "bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400",
+      colorClass: "bg-sky-500/20 text-sky-400",
       slug: "content-publishing"
     },
     {
       icon: TrendingUp,
       title: "Analytics & Reporting",
       description: "Monitor member activity, event participation, and community growth with detailed analytics and insights.",
-      colorClass: "bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400",
+      colorClass: "bg-sky-500/20 text-sky-400",
       slug: "analytics-reporting"
     }
   ];
@@ -276,7 +276,7 @@ function FeaturesSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, i) => (
             <Link href={`/features/${feature.slug}`} key={i} data-testid={`link-feature-${i}`}>
-              <Card className="group hover-elevate border-border/50 transition-all duration-300 h-full cursor-pointer" data-testid={`card-feature-${i}`}>
+              <Card className="group hover-elevate bg-sky-500/10 border-sky-500/25 transition-all duration-300 h-full cursor-pointer" data-testid={`card-feature-${i}`}>
                 <CardContent className="p-6 h-full flex flex-col">
                   <div className={`w-14 h-14 rounded-xl mb-5 flex items-center justify-center ${feature.colorClass} shadow-sm`}>
                     <feature.icon className="w-7 h-7" />
