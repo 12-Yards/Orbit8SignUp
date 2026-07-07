@@ -191,7 +191,7 @@ function FeaturesSection() {
       icon: MessageCircle,
       title: "Member Communication & Social Networking",
       description: "Enable members to connect, message, comment, post, and compete inside a private community network.",
-      colorClass: "bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400",
+      colorClass: "bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400",
       slug: "member-communication"
     },
     {
@@ -205,7 +205,7 @@ function FeaturesSection() {
       icon: Calendar,
       title: "Events & Competition Management",
       description: "Create and manage meet-ups, leagues, knockout tournaments, team competitions, and practice sessions with ease.",
-      colorClass: "bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400",
+      colorClass: "bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400",
       slug: "events-competitions"
     },
     {
@@ -219,7 +219,7 @@ function FeaturesSection() {
       icon: FileText,
       title: "Content Publishing & Insights",
       description: "Share news, articles, coaching tips, and community updates. Track engagement and allow members to publish articles or opinion pieces.",
-      colorClass: "bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400",
+      colorClass: "bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400",
       slug: "content-publishing"
     },
     {
