@@ -6,6 +6,14 @@ Orbit8 is a community management platform designed for clubs and communities. Th
 
 ## Recent Changes
 
+- **July 2026**: Full visual restyle to match the Tribal 18 reference site (dark premium theme):
+  - Dark charcoal-green backgrounds site-wide (single dark theme; light/dark toggle not used)
+  - Montserrat font family throughout
+  - White pill-shaped primary buttons, fully rounded buttons via the shadcn Button component
+  - Vibrant green accent (#55C371 / HSL 135 48% 55%) for highlights, rings, and glows
+  - Added glow-effect and glow-border utilities for the dashboard mockup card
+  - Added CSS fallbacks for computed border tokens (browsers without relative color syntax)
+  - Improved muted text contrast (68% lightness)
 - **March 2026**: Copy tweaks:
   - Changed features section heading "Build a Thriving Online Community" to "Build a thriving online community" (lowercase) on the home page
   - Changed CTA button text "Start Free Trial" to "Go Live Now" across home, feature, and benefit pages
