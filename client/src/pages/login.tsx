@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Link, useLocation } from "wouter";
 import { apiRequest } from "@/lib/queryClient";
-import logoPath from "@assets/tribal8png1_1783436226342.png";
+import logoPath from "@assets/tribal8icon_1783436350353.png";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");

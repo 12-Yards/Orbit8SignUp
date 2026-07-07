@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
-import logoPath from "@assets/tribal8png1_1783436226342.png";
+import logoPath from "@assets/tribal8icon_1783436350353.png";
 import {
   CheckCircle,
   Users,
