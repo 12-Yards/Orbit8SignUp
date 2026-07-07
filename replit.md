@@ -6,6 +6,7 @@ Orbit8 is a community management platform designed for clubs and communities. Th
 
 ## Recent Changes
 
+- **July 2026**: Replaced hero dashboard mockup with a Tribal 18-style admin dashboard preview: browser chrome (traffic-light dots, admin.orbit8.io URL pill), sidebar navigation (Dashboard, Members, Competitions, Events, Groups, Settings), members roster with search bar, stat tiles (Active Members, Events This Month, Groups), member rows with status pills, and green glow effect; removed the old floating "Upcoming Events" widget
 - **July 2026**: Removed home page sections: "How It Works", "Who is it for?", and "Testimonials" (including the "How It Works" header nav link and unused icon imports)
 - **July 2026**: Full visual restyle to match the Tribal 18 reference site (dark premium theme):
   - Dark charcoal-green backgrounds site-wide (single dark theme; light/dark toggle not used)
