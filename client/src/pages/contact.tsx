@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Link } from "wouter";
-import logoPath from "@assets/o8-icon-trns__1774603839947.png";
+import logoPath from "@assets/tribal8png1_1783436226342.png";
 import { apiRequest } from "@/lib/queryClient";
 
 export default function ContactPage() {

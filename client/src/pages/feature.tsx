@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import logoPath from "@assets/o8-icon-trns__1774603839947.png";
+import logoPath from "@assets/tribal8png1_1783436226342.png";
 import groupsCommunitiesImage from "@/assets/images/feature-groups-communities.png";
 import memberCommunicationImage from "@/assets/images/feature-member-communication.png";
 import eventsCompetitionsImage from "@/assets/images/feature-events-competitions.png";

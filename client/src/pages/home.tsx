@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import logoPath from "@assets/o8-icon-trns__1774603839947.png";
+import logoPath from "@assets/tribal8png1_1783436226342.png";
 import { Link } from "wouter";
 import { 
   Users, 
