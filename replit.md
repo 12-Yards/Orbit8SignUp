@@ -6,6 +6,7 @@ Tribal18 (formerly Orbit8) is a community management platform designed for clubs
 
 ## Recent Changes
 
+- **July 2026**: Removed the "Launch your community now" CTA section from the home page
 - **July 2026**: Updated site logo to the icon-only Tribal18 emblem (golfer/flag, no wordmark, attached_assets/tribal8icon_1783436350353.png), replacing the earlier logo-with-text version across all pages (header, footer, hero mockup, login, create-account, contact, feature, benefit)
 - **July 2026**: Rebranded from "Orbit8" to "Tribal18": replaced all "Orbit8" text with "Tribal18" and all orbit8.io domain references with tribal18.golf across the frontend (header, footer, hero mockup, SEO/Open Graph/Twitter meta tags, login, create-account onboarding, contact, admin, feature and benefit pages)
 - **July 2026**: Changed "View Platform" link URL from https://demo.golfjunkies.com to https://tribal18.golf (hero and CTA sections)

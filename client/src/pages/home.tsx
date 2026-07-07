@@ -327,43 +327,6 @@ function CTASection() {
   );
 }
 
-function LaunchCTASection() {
-  return (
-    <section className="py-6 lg:py-8" data-testid="section-launch-cta">
-      <div className="container mx-auto px-4">
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-600 to-sky-600 p-8 md:p-12 lg:p-16">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
-          <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="flex-shrink-0">
-              <img 
-                src={logoPath} 
-                alt="Tribal18" 
-                className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain drop-shadow-2xl brightness-0 invert sepia saturate-200 hue-rotate-[-30deg]"
-                data-testid="img-launch-cta-logo"
-              />
-            </div>
-            <div className="flex-1 flex flex-col items-center lg:items-start">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 text-center lg:text-left" data-testid="heading-launch-cta">
-                Launch your community now
-              </h2>
-              <p className="text-white/90 text-lg mb-6 text-center lg:text-left" data-testid="text-launch-cta-subtext">
-                Create your account and your community platform can be live in less than an hour.
-              </p>
-              <div className="w-full flex justify-center lg:justify-start">
-                <Link href="/create-account">
-                  <Button size="lg" className="bg-white text-emerald-700 hover:bg-white/90 shadow-lg" data-testid="button-create-account-cta">
-                    Create Account
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function PricingSection() {
   return (
     <section id="pricing" className="pt-5 lg:pt-7 pb-20 lg:pb-28" data-testid="section-pricing">
@@ -529,7 +492,6 @@ export default function Home() {
         <HeroSection />
         <FeaturesSection />
         <CTASection />
-        <LaunchCTASection />
         <PricingSection />
       </main>
       <Footer />
