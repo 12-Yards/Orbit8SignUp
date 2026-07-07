@@ -257,7 +257,7 @@ export default function CreateAccountPage() {
     if (hasDomain && domainName) {
       return domainName;
     }
-    return `${noDomainPrefix}.orbit8.io`;
+    return `${noDomainPrefix}.tribal18.golf`;
   };
 
   const getAdminUrl = () => {
@@ -401,7 +401,7 @@ export default function CreateAccountPage() {
       doc.text("Visit: ", margin + 7, y + 15);
       doc.setTextColor(2, 132, 199);
       doc.setFont("helvetica", "bold");
-      doc.textWithLink("checkdomainstatus.orbit8.io", margin + 18, y + 15, { url: "https://checkdomainstatus.orbit8.io/" });
+      doc.textWithLink("checkdomainstatus.tribal18.golf", margin + 18, y + 15, { url: "https://checkdomainstatus.tribal18.golf/" });
     }
 
     doc.save(`${orgName.replace(/[^a-zA-Z0-9]/g, "_")}_Platform_Details.pdf`);
@@ -498,8 +498,8 @@ export default function CreateAccountPage() {
       <header className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <Link href="/" className="flex items-center gap-2" data-testid="link-home">
-            <img src={logoPath} alt="Orbit8 Logo" className="h-10 w-10 object-contain" />
-            <span className="text-xl font-bold text-foreground">Orbit8</span>
+            <img src={logoPath} alt="Tribal18 Logo" className="h-10 w-10 object-contain" />
+            <span className="text-xl font-bold text-foreground">Tribal18</span>
           </Link>
         </div>
       </header>
@@ -645,13 +645,13 @@ export default function CreateAccountPage() {
                             To check the status of your domain, visit:
                           </p>
                           <a
-                            href="https://checkdomainstatus.orbit8.io/"
+                            href="https://checkdomainstatus.tribal18.golf/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 mt-2 text-sm font-semibold text-sky-600 hover:underline"
                             data-testid="link-check-domain-status"
                           >
-                            checkdomainstatus.orbit8.io
+                            checkdomainstatus.tribal18.golf
                             <ExternalLink className="w-3.5 h-3.5" />
                           </a>
                         </div>
@@ -828,7 +828,7 @@ export default function CreateAccountPage() {
                       {hasDomain === false && (
                         <div className="space-y-4">
                           <p className="text-sm text-muted-foreground">
-                            You can use the Orbit8.io domain (and change later).
+                            You can use the Tribal18.golf domain (and change later).
                           </p>
                           <div className="bg-muted/50 rounded-md p-4 border border-border/50">
                             <p className="text-sm text-muted-foreground mb-2">
@@ -853,7 +853,7 @@ export default function CreateAccountPage() {
                                 </span>
                               )}
                               <span className="font-mono font-semibold" data-testid="text-no-domain-suffix">
-                                .orbit8.io
+                                .tribal18.golf
                               </span>
                             </div>
                           </div>
@@ -935,23 +935,23 @@ export default function CreateAccountPage() {
                   {step === "terms" && (
                     <div className="space-y-5">
                       <div className="border border-border rounded-md p-4 max-h-[340px] overflow-y-auto text-sm text-muted-foreground space-y-4" data-testid="terms-content">
-                        <h3 className="font-bold text-foreground text-base">Orbit8 Platform Terms & Conditions</h3>
+                        <h3 className="font-bold text-foreground text-base">Tribal18 Platform Terms & Conditions</h3>
                         <p className="font-semibold text-foreground">1. Acceptance of Terms</p>
-                        <p>By creating an account and using the Orbit8 platform, you agree to be bound by these Terms and Conditions. If you do not agree, please do not proceed with account creation.</p>
+                        <p>By creating an account and using the Tribal18 platform, you agree to be bound by these Terms and Conditions. If you do not agree, please do not proceed with account creation.</p>
                         <p className="font-semibold text-foreground">2. Platform Usage</p>
-                        <p>The Orbit8 platform is provided as a Software-as-a-Service (SaaS) solution for managing communities, clubs, and related organisations. You agree to use the platform only for its intended purpose and in compliance with all applicable laws.</p>
+                        <p>The Tribal18 platform is provided as a Software-as-a-Service (SaaS) solution for managing communities, clubs, and related organisations. You agree to use the platform only for its intended purpose and in compliance with all applicable laws.</p>
                         <p className="font-semibold text-foreground">3. Account Responsibilities</p>
-                        <p>You are responsible for maintaining the confidentiality of your account credentials. You agree to notify Orbit8 immediately of any unauthorised use of your account. You are responsible for all activities that occur under your account.</p>
+                        <p>You are responsible for maintaining the confidentiality of your account credentials. You agree to notify Tribal18 immediately of any unauthorised use of your account. You are responsible for all activities that occur under your account.</p>
                         <p className="font-semibold text-foreground">4. Data Protection</p>
                         <p>We take data protection seriously. Your personal data and the data of your community members will be processed in accordance with our Privacy Policy and applicable data protection legislation including GDPR.</p>
                         <p className="font-semibold text-foreground">5. Content</p>
-                        <p>You retain ownership of all content you upload to the platform. By uploading content, you grant Orbit8 a licence to host and display that content as part of the service. You must not upload content that is unlawful, offensive, or infringes on third-party rights.</p>
+                        <p>You retain ownership of all content you upload to the platform. By uploading content, you grant Tribal18 a licence to host and display that content as part of the service. You must not upload content that is unlawful, offensive, or infringes on third-party rights.</p>
                         <p className="font-semibold text-foreground">6. Subscription & Billing</p>
                         <p>Access to certain features may require a paid subscription. Pricing details are available on our website. We reserve the right to modify pricing with reasonable notice. Free trial periods may be offered at our discretion.</p>
                         <p className="font-semibold text-foreground">7. Termination</p>
                         <p>Either party may terminate the agreement at any time. Upon termination, your access to the platform will be suspended and your data may be deleted after a reasonable retention period.</p>
                         <p className="font-semibold text-foreground">8. Limitation of Liability</p>
-                        <p>Orbit8 shall not be liable for any indirect, incidental, or consequential damages arising from the use of the platform. Our total liability shall not exceed the fees paid by you in the preceding 12 months.</p>
+                        <p>Tribal18 shall not be liable for any indirect, incidental, or consequential damages arising from the use of the platform. Our total liability shall not exceed the fees paid by you in the preceding 12 months.</p>
                         <p className="font-semibold text-foreground">9. Changes to Terms</p>
                         <p>We may update these terms from time to time. Continued use of the platform following any changes constitutes acceptance of the revised terms.</p>
                       </div>

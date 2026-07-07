@@ -109,7 +109,7 @@ export default function AdminPage() {
     <div className="min-h-screen bg-muted/30" data-testid="page-admin">
       <header className="bg-background border-b sticky top-0 z-50">
         <div className="container mx-auto flex h-14 items-center justify-between gap-4 px-4">
-          <h1 className="text-lg font-bold" data-testid="heading-admin">Orbit8 Admin</h1>
+          <h1 className="text-lg font-bold" data-testid="heading-admin">Tribal18 Admin</h1>
           <Button variant="ghost" size="sm" onClick={handleLogout} data-testid="button-admin-logout">
             <LogOut className="w-4 h-4 mr-2" />
             Logout
@@ -178,7 +178,7 @@ export default function AdminPage() {
                           <td className="py-3 pr-4">{reg.userName}</td>
                           <td className="py-3 pr-4">{reg.email}</td>
                           <td className="py-3 pr-4">
-                            {reg.hasDomain === "yes" ? reg.domainName : reg.noDomainPrefix ? `${reg.noDomainPrefix}.orbit8.io` : "-"}
+                            {reg.hasDomain === "yes" ? reg.domainName : reg.noDomainPrefix ? `${reg.noDomainPrefix}.tribal18.golf` : "-"}
                           </td>
                           <td className="py-3 pr-4">
                             {reg.createdAt ? new Date(reg.createdAt).toLocaleDateString() : "-"}
@@ -251,7 +251,7 @@ export default function AdminPage() {
                   {selectedReg.hasDomain === "no" && selectedReg.noDomainPrefix && (
                     <div>
                       <Label className="text-muted-foreground text-xs">Subdomain</Label>
-                      <p className="font-medium">{selectedReg.noDomainPrefix}.orbit8.io</p>
+                      <p className="font-medium">{selectedReg.noDomainPrefix}.tribal18.golf</p>
                     </div>
                   )}
                   <div>

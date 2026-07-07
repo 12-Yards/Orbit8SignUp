@@ -1,11 +1,12 @@
-# Orbit8
+# Tribal18
 
 ## Overview
 
-Orbit8 is a community management platform designed for clubs and communities. This is the marketing website for the Orbit8 SaaS platform. The application enables management of members, events, competitions, content, and reciprocal play arrangements.
+Tribal18 (formerly Orbit8) is a community management platform designed for clubs and communities. This is the marketing website for the Tribal18 SaaS platform. The application enables management of members, events, competitions, content, and reciprocal play arrangements.
 
 ## Recent Changes
 
+- **July 2026**: Rebranded from "Orbit8" to "Tribal18": replaced all "Orbit8" text with "Tribal18" and all orbit8.io domain references with tribal18.golf across the frontend (header, footer, hero mockup, SEO/Open Graph/Twitter meta tags, login, create-account onboarding, contact, admin, feature and benefit pages)
 - **July 2026**: Changed "View Platform" link URL from https://demo.golfjunkies.com to https://tribal18.golf (hero and CTA sections)
 - **July 2026**: Replaced hero dashboard mockup with a Tribal 18-style admin dashboard preview: browser chrome (traffic-light dots, admin.orbit8.io URL pill), sidebar navigation (Dashboard, Members, Competitions, Events, Groups, Settings), members roster with search bar, stat tiles (Active Members, Events This Month, Groups), member rows with status pills, and green glow effect; removed the old floating "Upcoming Events" widget
 - **July 2026**: Removed home page sections: "How It Works", "Who is it for?", and "Testimonials" (including the "How It Works" header nav link and unused icon imports)

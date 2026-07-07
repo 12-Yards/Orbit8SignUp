@@ -29,11 +29,11 @@ function Header() {
         <div className="flex items-center gap-2" data-testid="header-logo">
           <img 
             src={logoPath} 
-            alt="Orbit8 Logo" 
+            alt="Tribal18 Logo" 
             className="h-10 w-10 object-contain"
             data-testid="img-logo"
           />
-          <span className="text-xl font-bold text-foreground" data-testid="text-brand-name">Orbit8</span>
+          <span className="text-xl font-bold text-foreground" data-testid="text-brand-name">Tribal18</span>
         </div>
         <nav className="hidden md:flex items-center gap-6" data-testid="nav-main">
           <a href="/#features" className="text-sm font-medium text-muted-foreground hover-elevate px-2 py-1 rounded-md" data-testid="link-features">Features</a>
@@ -62,7 +62,7 @@ function HeroSection() {
               <span className="bg-gradient-to-r from-sky-600 to-sky-500 bg-clip-text text-transparent">Management</span> Platform
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl leading-relaxed" data-testid="text-hero-description">
-              Orbit8 helps communities to connect members, manage events and competitions, share content, and provide specific features for different community types — all from one powerful platform.
+              Tribal18 helps communities to connect members, manage events and competitions, share content, and provide specific features for different community types — all from one powerful platform.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link href="/create-account">
@@ -90,7 +90,7 @@ function HeroSection() {
                 <div className="flex-1 flex justify-center">
                   <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-background/80 border border-border/60 text-[10px] text-muted-foreground">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                    admin.orbit8.io
+                    admin.tribal18.golf
                   </div>
                 </div>
               </div>
@@ -98,7 +98,7 @@ function HeroSection() {
                 <div className="hidden sm:flex flex-col w-40 border-r border-border/60 bg-background/40 py-4 px-2 gap-1">
                   <div className="flex items-center gap-2 px-2 mb-3">
                     <img src={logoPath} alt="" className="w-5 h-5" />
-                    <span className="text-xs font-bold" data-testid="text-dashboard-title">Orbit8</span>
+                    <span className="text-xs font-bold" data-testid="text-dashboard-title">Tribal18</span>
                   </div>
                   {[
                     { label: "Dashboard", icon: LayoutDashboard, active: false },
@@ -249,7 +249,7 @@ function FeaturesSection() {
                 Everything You Need to Grow, Engage, and Manage Your Community
               </h3>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed" data-testid="text-features-description">
-                Orbit8 is a modern community software platform designed for societies, content creators and independent communities looking to increase engagement, participation, and revenue.
+                Tribal18 is a modern community software platform designed for societies, content creators and independent communities looking to increase engagement, participation, and revenue.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mt-8">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -306,7 +306,7 @@ function CTASection() {
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" data-testid="heading-cta">Ready to Get Started?</h2>
           <p className="text-white/90 text-lg mb-8">
-            Join thousands of communities already using Orbit8 to engage their members.
+            Join thousands of communities already using Tribal18 to engage their members.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://tribal18.golf" target="_blank" rel="noopener noreferrer">
@@ -337,7 +337,7 @@ function LaunchCTASection() {
             <div className="flex-shrink-0">
               <img 
                 src={logoPath} 
-                alt="Orbit8" 
+                alt="Tribal18" 
                 className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain drop-shadow-2xl brightness-0 invert sepia saturate-200 hue-rotate-[-30deg]"
                 data-testid="img-launch-cta-logo"
               />
@@ -456,11 +456,11 @@ function Footer() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
               <div className="flex items-center gap-2 mb-4" data-testid="footer-logo">
-                <img src={logoPath} alt="Orbit8 Logo" className="h-10 w-10 object-contain" />
-                <span className="text-xl font-bold">Orbit8</span>
+                <img src={logoPath} alt="Tribal18 Logo" className="h-10 w-10 object-contain" />
+                <span className="text-xl font-bold">Tribal18</span>
               </div>
               <p className="text-sm text-muted-foreground max-w-md leading-relaxed" data-testid="text-footer-description">
-                Orbit8 is a leading community management software platform helping clubs and communities connect members, manage events and competitions, enable reciprocal play, and grow participation.
+                Tribal18 is a leading community management software platform helping clubs and communities connect members, manage events and competitions, enable reciprocal play, and grow participation.
               </p>
             </div>
             <div>
@@ -491,7 +491,7 @@ function Footer() {
           </div>
           <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground" data-testid="text-copyright">
-              © {new Date().getFullYear()} Orbit8. All rights reserved.
+              © {new Date().getFullYear()} Tribal18. All rights reserved.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-sm text-muted-foreground hover-elevate px-1 py-0.5 rounded" data-testid="link-privacy">Privacy Policy</a>

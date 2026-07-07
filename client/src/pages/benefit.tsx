@@ -149,10 +149,10 @@ function Header() {
           <div className="flex items-center gap-2 cursor-pointer">
             <img 
               src={logoPath} 
-              alt="Orbit8 Logo" 
+              alt="Tribal18 Logo" 
               className="h-10 w-10 object-contain"
             />
-            <span className="font-bold text-xl hidden sm:inline">Orbit8</span>
+            <span className="font-bold text-xl hidden sm:inline">Tribal18</span>
           </div>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
@@ -181,11 +181,11 @@ function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
-            <img src={logoPath} alt="Orbit8" className="h-8 w-8 object-contain" />
-            <span className="font-bold">Orbit8</span>
+            <img src={logoPath} alt="Tribal18" className="h-8 w-8 object-contain" />
+            <span className="font-bold">Tribal18</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Orbit8. All rights reserved.
+            © {new Date().getFullYear()} Tribal18. All rights reserved.
           </p>
         </div>
       </div>
@@ -200,8 +200,8 @@ export default function BenefitPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    const defaultTitle = "Community Management Software for Clubs & Members | Orbit8";
-    const defaultDescription = "Orbit8 is an all-in-one community management platform for clubs and communities. Manage members, events, competitions, content, and reciprocal play from one powerful system.";
+    const defaultTitle = "Community Management Software for Clubs & Members | Tribal18";
+    const defaultDescription = "Tribal18 is an all-in-one community management platform for clubs and communities. Manage members, events, competitions, content, and reciprocal play from one powerful system.";
     
     const updateMetaTag = (selector: string, attribute: string, value: string) => {
       const tag = document.querySelector(selector);
@@ -209,7 +209,7 @@ export default function BenefitPage() {
     };
     
     if (benefit) {
-      const benefitTitle = `${benefit.title} | Orbit8`;
+      const benefitTitle = `${benefit.title} | Tribal18`;
       const benefitDescription = benefit.heroDescription;
       
       document.title = benefitTitle;
@@ -217,7 +217,7 @@ export default function BenefitPage() {
       updateMetaTag('meta[property="og:title"]', 'content', benefitTitle);
       updateMetaTag('meta[property="og:description"]', 'content', benefitDescription);
     } else {
-      document.title = "Benefit Not Found | Orbit8";
+      document.title = "Benefit Not Found | Tribal18";
     }
     
     return () => {
@@ -346,7 +346,7 @@ export default function BenefitPage() {
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ready to Get Started?</h2>
               <p className="text-white/90 text-lg mb-8">
-                Join thousands of communities already using Orbit8 to engage their members.
+                Join thousands of communities already using Tribal18 to engage their members.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/create-account">

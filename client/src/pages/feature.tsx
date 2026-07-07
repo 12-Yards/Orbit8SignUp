@@ -169,11 +169,11 @@ function Header() {
           <div className="flex items-center gap-2 cursor-pointer" data-testid="header-logo">
             <img 
               src={logoPath} 
-              alt="Orbit8 Logo" 
+              alt="Tribal18 Logo" 
               className="h-10 w-10 object-contain"
               data-testid="img-logo"
             />
-            <span className="text-xl font-bold text-foreground" data-testid="text-brand-name">Orbit8</span>
+            <span className="text-xl font-bold text-foreground" data-testid="text-brand-name">Tribal18</span>
           </div>
         </Link>
         <nav className="hidden md:flex items-center gap-6" data-testid="nav-main">
@@ -201,12 +201,12 @@ function Footer() {
             <div className="md:col-span-2">
               <Link href="/">
                 <div className="flex items-center gap-2 mb-4 cursor-pointer" data-testid="footer-logo">
-                  <img src={logoPath} alt="Orbit8 Logo" className="h-10 w-10 object-contain" />
-                  <span className="text-xl font-bold">Orbit8</span>
+                  <img src={logoPath} alt="Tribal18 Logo" className="h-10 w-10 object-contain" />
+                  <span className="text-xl font-bold">Tribal18</span>
                 </div>
               </Link>
               <p className="text-sm text-muted-foreground max-w-md leading-relaxed" data-testid="text-footer-description">
-                Orbit8 is a leading community management software platform helping clubs and communities connect members, manage events and competitions, enable reciprocal play, and grow participation.
+                Tribal18 is a leading community management software platform helping clubs and communities connect members, manage events and competitions, enable reciprocal play, and grow participation.
               </p>
             </div>
             <div>
@@ -237,7 +237,7 @@ function Footer() {
           </div>
           <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground" data-testid="text-copyright">
-              © {new Date().getFullYear()} Orbit8. All rights reserved.
+              © {new Date().getFullYear()} Tribal18. All rights reserved.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-sm text-muted-foreground hover-elevate px-1 py-0.5 rounded" data-testid="link-privacy">Privacy Policy</a>
@@ -274,10 +274,10 @@ export default function FeaturePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    const defaultTitle = "Community Management Software for Clubs & Members | Orbit8";
-    const defaultDescription = "Orbit8 is an all-in-one community management platform for clubs and communities. Manage members, events, competitions, content, and reciprocal play from one powerful system.";
+    const defaultTitle = "Community Management Software for Clubs & Members | Tribal18";
+    const defaultDescription = "Tribal18 is an all-in-one community management platform for clubs and communities. Manage members, events, competitions, content, and reciprocal play from one powerful system.";
     const defaultImage = "/favicon.png";
-    const defaultUrl = "https://orbit8.io";
+    const defaultUrl = "https://tribal18.golf";
     
     const updateMetaTag = (selector: string, attribute: string, value: string) => {
       const tag = document.querySelector(selector);
@@ -285,7 +285,7 @@ export default function FeaturePage() {
     };
     
     if (feature) {
-      const featureTitle = `${feature.title} | Orbit8`;
+      const featureTitle = `${feature.title} | Tribal18`;
       const featureDescription = feature.heroDescription;
       const featureUrl = `${defaultUrl}/features/${slug}`;
       
@@ -299,7 +299,7 @@ export default function FeaturePage() {
       updateMetaTag('meta[name="twitter:title"]', 'content', featureTitle);
       updateMetaTag('meta[name="twitter:description"]', 'content', featureDescription);
     } else {
-      document.title = "Feature Not Found | Orbit8";
+      document.title = "Feature Not Found | Tribal18";
     }
     
     return () => {
@@ -309,7 +309,7 @@ export default function FeaturePage() {
       updateMetaTag('meta[property="og:description"]', 'content', defaultDescription);
       updateMetaTag('meta[property="og:url"]', 'content', defaultUrl);
       updateMetaTag('meta[property="og:image"]', 'content', defaultImage);
-      updateMetaTag('meta[name="twitter:title"]', 'content', "Community Management Software | Orbit8");
+      updateMetaTag('meta[name="twitter:title"]', 'content', "Community Management Software | Tribal18");
       updateMetaTag('meta[name="twitter:description"]', 'content', "All-in-one community management platform. Manage members, events, competitions, and reciprocal play.");
     };
   }, [feature, slug]);
@@ -405,7 +405,7 @@ export default function FeaturePage() {
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ready to Get Started?</h2>
               <p className="text-white/90 text-lg mb-8">
-                Join thousands of communities already using Orbit8 to engage their members.
+                Join thousands of communities already using Tribal18 to engage their members.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/create-account">

@@ -43,10 +43,10 @@ export default function ContactPage() {
           <Link href="/" className="flex items-center gap-2" data-testid="link-home">
             <img 
               src={logoPath} 
-              alt="Orbit8 Logo" 
+              alt="Tribal18 Logo" 
               className="h-10 w-10 object-contain"
             />
-            <span className="text-xl font-bold text-foreground">Orbit8</span>
+            <span className="text-xl font-bold text-foreground">Tribal18</span>
           </Link>
         </div>
       </header>
