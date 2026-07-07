@@ -492,7 +492,7 @@ export default function CreateAccountPage() {
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-br from-emerald-50 via-sky-50 to-background dark:from-emerald-950/20 dark:via-sky-950/20 dark:to-background flex flex-col"
+      className="min-h-screen bg-background flex flex-col"
       data-testid="page-create-account"
     >
       <header className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">

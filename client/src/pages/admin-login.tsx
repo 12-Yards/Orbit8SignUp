@@ -30,7 +30,7 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 flex items-center justify-center p-4" data-testid="page-admin-login">
+    <div className="min-h-screen bg-background flex items-center justify-center p-4" data-testid="page-admin-login">
       <Card className="w-full max-w-sm">
         <CardHeader className="text-center">
           <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
