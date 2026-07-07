@@ -14,12 +14,7 @@ import {
   CheckCircle,
   ArrowRight,
   Star,
-  Building,
-  MapPin,
-  Trophy,
-  Play,
-  Settings,
-  Heart
+  Play
 } from "lucide-react";
 
 function Header() {
@@ -37,7 +32,6 @@ function Header() {
         </div>
         <nav className="hidden md:flex items-center gap-6" data-testid="nav-main">
           <a href="/#features" className="text-sm font-medium text-muted-foreground hover-elevate px-2 py-1 rounded-md" data-testid="link-features">Features</a>
-          <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover-elevate px-2 py-1 rounded-md" data-testid="link-how-it-works">How It Works</a>
           <a href="#pricing" className="text-sm font-medium text-muted-foreground hover-elevate px-2 py-1 rounded-md" data-testid="link-pricing">Pricing</a>
         </nav>
         <div className="flex items-center gap-3">
@@ -304,104 +298,6 @@ function CTASection() {
   );
 }
 
-function HowItWorksSection() {
-  const steps = [
-    {
-      number: "01",
-      title: "Create Your Community Website",
-      description: "Launch a branded community website with full admin controls.",
-      icon: Building
-    },
-    {
-      number: "02",
-      title: "Engage Your Members",
-      description: "Enable members to connect, chat, comment and join interest groups.",
-      icon: Users
-    },
-    {
-      number: "03",
-      title: "Create Events and Competitions",
-      description: "Launch community events and competitions further engaging members.",
-      icon: Calendar
-    },
-    {
-      number: "04",
-      title: "Enable Reciprocal Tee Times",
-      description: "Allow members to offer tee times and play a variety of clubs.",
-      icon: Globe
-    },
-    {
-      number: "05",
-      title: "Track Performance",
-      description: "Monitor member activity, event participation, and community growth.",
-      icon: TrendingUp
-    }
-  ];
-
-  return (
-    <section id="how-it-works" className="py-16 lg:py-20" data-testid="section-how-it-works">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold" data-testid="heading-how-it-works">
-            How It Works
-          </h2>
-        </div>
-        <div className="max-w-2xl mx-auto space-y-6">
-          {steps.map((step, i) => (
-            <div key={i} className="flex items-start gap-6 group" data-testid={`step-${i}`}>
-              <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500 to-sky-500 flex items-center justify-center text-white shadow-lg">
-                <step.icon className="w-7 h-7" />
-              </div>
-              <div className="flex-1 pb-6 border-b border-border/50 group-last:border-0 group-last:pb-0">
-                <h3 className="font-bold text-lg mb-2" data-testid={`heading-step-${i}`}>{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed" data-testid={`text-step-${i}`}>{step.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function WhoIsItForSection() {
-  const audiences = [
-    { title: "Communities", icon: Users },
-    { title: "Societies", icon: Trophy },
-    { title: "Associations", icon: Building },
-    { title: "Content Creators", icon: Globe },
-    { title: "Regional Groups", icon: MapPin }
-  ];
-
-  return (
-    <section className="py-16 lg:py-20 bg-muted/30" data-testid="section-who-is-it-for">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold" data-testid="heading-who-is-it-for">
-            Who is it for?
-          </h2>
-        </div>
-        <div className="overflow-x-auto pb-4">
-          <div className="flex gap-4 min-w-max lg:min-w-0 lg:grid lg:grid-cols-5 lg:gap-6">
-            {audiences.map((audience, i) => (
-              <div 
-                key={i} 
-                className="flex-shrink-0 w-52 lg:w-auto p-6 rounded-2xl bg-gradient-to-br from-background to-muted/50 border border-border/30 shadow-md hover:shadow-lg hover:border-emerald-500/30 transition-all duration-300 text-center group"
-                data-testid={`audience-${i}`}
-              >
-                <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-emerald-500 to-sky-500 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
-                  <audience.icon className="w-7 h-7 text-white" />
-                </div>
-                <span className="font-semibold text-foreground" data-testid={`heading-audience-${i}`}>{audience.title}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function LaunchCTASection() {
   return (
     <section className="py-6 lg:py-8" data-testid="section-launch-cta">
@@ -433,67 +329,6 @@ function LaunchCTASection() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function SocialProofSection() {
-  const testimonials = [
-    {
-      quote: "Orbit8 has transformed how we manage our 500+ member society. Event management is now a breeze!",
-      author: "James Thompson",
-      role: "Secretary, Surrey Society",
-      rating: 5
-    },
-    {
-      quote: "The reciprocal play feature has opened up so many new opportunities for our members. Highly recommended.",
-      author: "Sarah Mitchell",
-      role: "Captain, Kent Club",
-      rating: 5
-    },
-    {
-      quote: "We've seen a 200% increase in member engagement since switching to Orbit8.",
-      author: "Michael Roberts",
-      role: "Manager, Essex Association",
-      rating: 5
-    }
-  ];
-
-  return (
-    <section className="py-8 lg:py-10 bg-muted/30" data-testid="section-testimonials">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-testimonials">
-            Testimonials
-          </h2>
-          <p className="text-xl text-muted-foreground" data-testid="text-testimonials-subtitle">
-            Trusted by Clubs and Communities Across the UK
-          </p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, i) => (
-            <Card key={i} className="hover-elevate h-full" data-testid={`card-testimonial-${i}`}>
-              <CardContent className="p-6 h-full flex flex-col">
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, j) => (
-                    <Star key={j} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6 leading-relaxed flex-1" data-testid={`text-testimonial-quote-${i}`}>"{testimonial.quote}"</p>
-                <div className="flex items-center gap-4 pt-4 border-t border-border/50 mt-auto">
-                  <div className="w-12 h-12 rounded-lg bg-muted/80 border border-border/50 flex items-center justify-center">
-                    <Building className="w-6 h-6 text-muted-foreground" />
-                  </div>
-                  <div className="flex flex-col justify-center">
-                    <div className="font-semibold text-sm" data-testid={`text-testimonial-author-${i}`}>{testimonial.author}</div>
-                    <div className="text-xs text-muted-foreground" data-testid={`text-testimonial-role-${i}`}>{testimonial.role}</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
         </div>
       </div>
     </section>
@@ -665,10 +500,7 @@ export default function Home() {
         <HeroSection />
         <FeaturesSection />
         <CTASection />
-        <HowItWorksSection />
-        <WhoIsItForSection />
         <LaunchCTASection />
-        <SocialProofSection />
         <PricingSection />
       </main>
       <Footer />
