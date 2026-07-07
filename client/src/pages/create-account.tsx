@@ -506,7 +506,7 @@ export default function CreateAccountPage() {
 
       <div className="flex-1 flex items-center justify-center p-4 md:p-8">
         {(creatingPlatform || showComplete) ? (
-          <Card className="w-full max-w-2xl overflow-hidden">
+          <Card className="w-full max-w-2xl overflow-hidden bg-secondary border-border">
             <CardContent className="p-8 md:p-10">
               {creatingPlatform ? (
                 <div className="text-center py-12">
@@ -680,7 +680,7 @@ export default function CreateAccountPage() {
             </CardContent>
           </Card>
         ) : (
-        <Card className="w-full max-w-4xl overflow-hidden">
+        <Card className="w-full max-w-4xl overflow-hidden bg-secondary border-border">
           <div className="grid md:grid-cols-2">
             <div className="bg-gradient-to-br from-emerald-600 to-sky-600 p-8 md:p-10 text-white flex flex-col justify-start">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">{currentLeftPanel.heading}</h2>

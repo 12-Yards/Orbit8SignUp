@@ -6,6 +6,7 @@ Tribal18 (formerly Orbit8) is a community management platform designed for clubs
 
 ## Recent Changes
 
+- **July 2026**: Increased contrast of the Create Account card against the dark page background: card surface lifted from bg-card (8% lightness) to bg-secondary (12%) with a visible border (applies to both the onboarding wizard card and the creating/ready card)
 - **July 2026**: Fixed light-grey page backgrounds on Create Account and Admin Login pages: replaced leftover light pastel gradients (emerald-50/sky-50 and slate-50) with the standard dark bg-background so the header matches the main page
 - **July 2026**: Removed "Learn more" links from the feature tiles and removed the 6 feature detail pages entirely (deleted client/src/pages/feature.tsx and the /features/:slug route); feature tiles are no longer clickable
 - **July 2026**: Feature tiles now use the hero "Management" sky blue: card backgrounds tinted translucent sky blue (bg-sky-500/10, sky border) and icon chips in brighter sky blue (bg-sky-500/20, text-sky-400); the first attempt used dark-mode sky-950 which looked black on the dark theme
