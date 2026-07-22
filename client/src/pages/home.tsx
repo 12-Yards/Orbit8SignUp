@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import logoPath from "@assets/tribal8icon_1783436350353.png";
-import heroAppPath from "@assets/image_1784735263353.png";
+import heroAppPath from "@assets/image_1784735462257.png";
 import { Link } from "wouter";
 import { 
   Users, 
