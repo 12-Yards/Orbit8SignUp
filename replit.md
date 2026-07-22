@@ -6,6 +6,7 @@ Tribal18 (formerly Orbit8) is a community management platform designed for clubs
 
 ## Recent Changes
 
+- **July 2026**: Moved "Content publishing" from the Professional plan's feature list to the free Starter plan in the pricing section
 - **July 2026**: Changed the "Free Trial Available" checklist item in the features section to "Go Live For Free" (title case)
 - **July 2026**: Changed the features section subheading from "Everything your administrators need to grow, engage and manage your community" to "A platform that carries your brand, run by your own team, built around your members", then to "One platform. Every tool your community needs."
 - **July 2026**: Changed the features section heading from "Your community, your brand, your platform" to "Own the Experience. Build the Community."
