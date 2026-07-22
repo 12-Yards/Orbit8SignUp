@@ -237,6 +237,9 @@ function PricingSection() {
           <p className="text-muted-foreground text-lg" data-testid="text-pricing-description">
             Transparent monthly or annual subscriptions. Start growing your community today.
           </p>
+          <p className="text-emerald-500 dark:text-emerald-400 font-medium mt-3" data-testid="text-pricing-free-trial">
+            Free for first 30 days, no card details needed to go live.
+          </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <Card className="hover-elevate h-full" data-testid="card-pricing-starter">
