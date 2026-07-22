@@ -1,0 +1,1 @@
+- [SEO meta injection](seo-meta-injection.md) — new public pages need meta in both client useSEO and server/seo.ts routeMeta + sitemap.xml; crawlers rely on server injection.

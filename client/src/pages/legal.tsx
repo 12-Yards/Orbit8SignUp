@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import logoPath from "@assets/tribal8icon_1783436350353.png";
+import { useSEO } from "@/lib/seo";
 
 function LegalLayout({ title, updated, children, testId }: { title: string; updated: string; children: React.ReactNode; testId: string }) {
   return (
@@ -32,6 +33,11 @@ function LegalLayout({ title, updated, children, testId }: { title: string; upda
 }
 
 export function PrivacyPage() {
+  useSEO({
+    title: "Privacy Policy | Tribal18",
+    description: "Read the Tribal18 Privacy Policy to learn how we collect, use and protect your personal information.",
+    path: "/privacy",
+  });
   return (
     <LegalLayout title="Privacy Policy" updated="July 2026" testId="page-privacy">
       <section>
@@ -92,6 +98,11 @@ export function PrivacyPage() {
 }
 
 export function TermsPage() {
+  useSEO({
+    title: "Terms & Conditions | Tribal18",
+    description: "Read the Tribal18 Terms & Conditions covering accounts, acceptable use, subscriptions and more.",
+    path: "/terms",
+  });
   return (
     <LegalLayout title="Terms & Conditions" updated="July 2026" testId="page-terms">
       <section>

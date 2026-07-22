@@ -6,8 +6,10 @@ import { Label } from "@/components/ui/label";
 import { useLocation } from "wouter";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import { Lock } from "lucide-react";
+import { useSEO } from "@/lib/seo";
 
 export default function AdminLoginPage() {
+  useSEO({ title: "Admin Login | Tribal18", noindex: true });
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");

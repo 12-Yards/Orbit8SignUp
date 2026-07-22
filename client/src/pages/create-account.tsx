@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 import logoPath from "@assets/tribal8icon_1783436350353.png";
+import { useSEO } from "@/lib/seo";
 import {
   CheckCircle,
   Users,
@@ -25,6 +26,7 @@ import {
 type OnboardingStep = "register" | "identity" | "terms";
 
 export default function CreateAccountPage() {
+  useSEO({ title: "Create Your Account | Tribal18", description: "Create your Tribal18 community platform in minutes. Free for the first 30 days, no card details needed to go live.", path: "/create-account" });
   const { toast } = useToast();
   const [step, setStep] = useState<OnboardingStep>("register");
   const [orgName, setOrgName] = useState("");

@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import logoPath from "@assets/tribal8icon_1783436350353.png";
 import heroAppPath from "@assets/image_1784735462257.png";
 import { Link } from "wouter";
+import { useSEO } from "@/lib/seo";
 import { 
   Users, 
   Calendar, 
@@ -383,6 +384,7 @@ function Footer() {
 }
 
 export default function Home() {
+  useSEO({ path: "/" });
   return (
     <div className="min-h-screen" data-testid="page-home">
       <Header />

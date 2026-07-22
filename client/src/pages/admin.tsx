@@ -16,10 +16,12 @@ import {
   Trash2,
 } from "lucide-react";
 import type { Registration, ContactSubmission } from "@shared/schema";
+import { useSEO } from "@/lib/seo";
 
 type Tab = "registrations" | "contacts";
 
 export default function AdminPage() {
+  useSEO({ title: "Admin | Tribal18", noindex: true });
   const [, setLocation] = useLocation();
   const [tab, setTab] = useState<Tab>("registrations");
   const [selectedReg, setSelectedReg] = useState<Registration | null>(null);

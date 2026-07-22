@@ -7,8 +7,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Link } from "wouter";
 import logoPath from "@assets/tribal8icon_1783436350353.png";
 import { apiRequest } from "@/lib/queryClient";
+import { useSEO } from "@/lib/seo";
 
 export default function ContactPage() {
+  useSEO({ title: "Contact Us | Tribal18", description: "Get in touch with the Tribal18 team to learn how our community management platform can help your golf club, society or community.", path: "/contact" });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [organisation, setOrganisation] = useState("");
