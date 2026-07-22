@@ -149,7 +149,7 @@ function FeaturesSection() {
                 Fully Branded &amp; Customisable
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text" data-testid="heading-features">
-                Your community, your brand, your platform
+                Own the Experience. Build the Community.
               </h2>
               <h3 className="text-xl md:text-2xl font-semibold text-muted-foreground mb-6">
                 Everything your administrators need to grow, engage and manage your community
