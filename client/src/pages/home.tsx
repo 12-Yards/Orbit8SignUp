@@ -168,7 +168,7 @@ function FeaturesSection() {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <CheckCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span>Free Trial Available</span>
+                  <span>Go live for free</span>
                 </div>
               </div>
             </CardContent>
