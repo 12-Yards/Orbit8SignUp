@@ -6,7 +6,7 @@ Tribal18 (formerly Orbit8) is a community management platform designed for clubs
 
 ## Recent Changes
 
-- **July 2026**: Changed pricing buttons for Starter ("Get Started Free") and Professional ("Go Live Now") to "Go Live Now - pay nothing for 30 days" (Enterprise "Contact Us" unchanged)
+- **July 2026**: Replaced the three per-plan pricing buttons (Starter, Professional, Enterprise "Contact Us") with a single centered "Go Live Now - pay nothing for 30 days" button below the pricing cards, linking to /create-account
 - **July 2026**: Added "Reviews" and "Podcasts" to the Starter plan's feature list in the pricing section
 - **July 2026**: Added "Search and connect with other golfers" to the Professional plan's feature list in the pricing section
 - **July 2026**: Added a highlighted line under the pricing section description: "Free for first 30 days, no card details needed to go live." (emerald green text)
