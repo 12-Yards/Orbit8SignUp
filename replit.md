@@ -6,6 +6,7 @@ Tribal18 (formerly Orbit8) is a community management platform designed for clubs
 
 ## Recent Changes
 
+- **July 2026**: Added "Reviews" and "Podcasts" to the Starter plan's feature list in the pricing section
 - **July 2026**: Added "Search and connect with other golfers" to the Professional plan's feature list in the pricing section
 - **July 2026**: Added a highlighted line under the pricing section description: "Free for first 30 days, no card details needed to go live." (emerald green text)
 - **July 2026**: Moved "Content publishing" from the Professional plan's feature list to the free Starter plan in the pricing section

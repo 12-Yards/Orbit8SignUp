@@ -250,7 +250,7 @@ function PricingSection() {
                 <div className="text-sm text-muted-foreground">Forever</div>
               </div>
               <div className="space-y-3 mb-6 flex-1">
-                {["Up to 50 members", "Basic event management", "Community feed", "Content publishing", "Email support"].map((feature, i) => (
+                {["Up to 50 members", "Basic event management", "Community feed", "Content publishing", "Reviews", "Podcasts", "Email support"].map((feature, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm" data-testid={`text-starter-feature-${i}`}>
                     <CheckCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
                     <span>{feature}</span>
