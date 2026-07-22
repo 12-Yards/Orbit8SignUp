@@ -11,6 +11,8 @@ import CreateAccountPage from "@/pages/create-account";
 import ContactPage from "@/pages/contact";
 import AdminLoginPage from "@/pages/admin-login";
 import AdminPage from "@/pages/admin";
+import { PrivacyPage, TermsPage } from "@/pages/legal";
+import CookieConsent from "@/components/cookie-consent";
 
 function Router() {
   return (
@@ -22,6 +24,8 @@ function Router() {
       <Route path="/contact" component={ContactPage} />
       <Route path="/admin/login" component={AdminLoginPage} />
       <Route path="/admin" component={AdminPage} />
+      <Route path="/privacy" component={PrivacyPage} />
+      <Route path="/terms" component={TermsPage} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -33,6 +37,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <CookieConsent />
       </TooltipProvider>
     </QueryClientProvider>
   );

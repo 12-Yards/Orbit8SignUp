@@ -6,6 +6,7 @@ Tribal18 (formerly Orbit8) is a community management platform designed for clubs
 
 ## Recent Changes
 
+- **July 2026**: Added Privacy Policy page (/privacy), Terms & Conditions page (/terms) (both in client/src/pages/legal.tsx with shared dark-theme layout, header, and back button), and a cookie consent popup (client/src/components/cookie-consent.tsx, shown site-wide until Accept/Decline is chosen, remembered in localStorage under "tribal18-cookie-consent"); footer Privacy Policy / Terms links now point to the new pages ("Terms of Service" renamed "Terms & Conditions")
 - **July 2026**: Replaced the three per-plan pricing buttons (Starter, Professional, Enterprise "Contact Us") with a single centered "Go Live Now - pay nothing for 30 days" button below the pricing cards, linking to /create-account
 - **July 2026**: Added "Reviews" and "Podcasts" to the Starter plan's feature list in the pricing section
 - **July 2026**: Added "Search and connect with other golfers" to the Professional plan's feature list in the pricing section
@@ -132,6 +133,8 @@ The frontend follows a component-based architecture with:
 - `/contact` - Contact page (form with Organisation, Name, Email, Mobile, Notes, data saved to DB)
 - `/admin/login` - Admin login page (username: admin)
 - `/admin` - Admin dashboard (view registrations and contact submissions, edit Platform/Admin URLs)
+- `/privacy` - Privacy Policy page
+- `/terms` - Terms & Conditions page
 - `/benefits/:slug` - Benefit detail pages (5 total)
 - Benefit slugs: member-engagement, simplify-management, inter-club-play, revenue-streams, improve-retention
 
