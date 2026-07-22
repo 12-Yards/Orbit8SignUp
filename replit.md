@@ -6,6 +6,7 @@ Tribal18 (formerly Orbit8) is a community management platform designed for clubs
 
 ## Recent Changes
 
+- **July 2026**: Replaced the hero description paragraph with new golf-focused copy: "Build a thriving golfing community with Tribal18. Our web and mobile platform gives clubs, societies and golf communities everything they need to manage members, organise competitions and events, connect golfers, arrange games and keep members engaged. Fully branded, fully customisable and managed by your own administrators, Tribal18 provides all the tools to grow and run your community from a single platform."
 - **July 2026**: Changed hero heading to "Built to Help Your Golf Community Flourish" (added "Golf"; "Golf Community" in sky blue, "Flourish" in emerald green)
 - **July 2026**: Changed "View Platform" link URL from https://tribal18.golf to https://tribal18.com (hero and pricing/CTA sections)
 - **July 2026**: Replaced the hero dashboard mockup (coded admin dashboard preview) with an attached image of four Tribal18 mobile app screens (updated to attached_assets/image_1784735462257.png showing Home, Event Details, Play, and Community screens), keeping the rounded frame, border, and green glow; removed the now-unused lucide icon imports (LayoutDashboard, Trophy, Settings, Search, Bell, MoreHorizontal)
