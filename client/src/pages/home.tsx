@@ -148,10 +148,10 @@ function FeaturesSection() {
                 Community Platform
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text" data-testid="heading-features">
-                Build a thriving online community
+                Your community, your brand, your platform
               </h2>
               <h3 className="text-xl md:text-2xl font-semibold text-muted-foreground mb-6">
-                Everything You Need to Grow, Engage, and Manage Your Community
+                Everything your administrators need to grow, engage and manage your community
               </h3>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed" data-testid="text-features-description">
                 Fully branded, fully customisable and managed by your own administrators, Tribal18 provides all the tools to grow and run your community from a single platform.
