@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import logoPath from "@assets/tribal8icon_1783436350353.png";
+import heroAppPath from "@assets/image_1784735263353.png";
 import { Link } from "wouter";
 import { 
   Users, 
@@ -13,13 +14,7 @@ import {
   TrendingUp,
   CheckCircle,
   ArrowRight,
-  Play,
-  LayoutDashboard,
-  Trophy,
-  Settings,
-  Search,
-  Bell,
-  MoreHorizontal
+  Play
 } from "lucide-react";
 
 function Header() {
@@ -80,103 +75,13 @@ function HeroSection() {
             </div>
           </div>
           <div className="relative" data-testid="hero-dashboard-preview">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/60 bg-card glow-effect">
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-border/60 bg-secondary/60">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                </div>
-                <div className="flex-1 flex justify-center">
-                  <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-background/80 border border-border/60 text-[10px] text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                    admin.tribal18.golf
-                  </div>
-                </div>
-              </div>
-              <div className="flex">
-                <div className="hidden sm:flex flex-col w-40 border-r border-border/60 bg-background/40 py-4 px-2 gap-1">
-                  <div className="flex items-center gap-2 px-2 mb-3">
-                    <img src={logoPath} alt="" className="w-5 h-5" />
-                    <span className="text-xs font-bold" data-testid="text-dashboard-title">Tribal18</span>
-                  </div>
-                  {[
-                    { label: "Dashboard", icon: LayoutDashboard, active: false },
-                    { label: "Members", icon: Users, active: true },
-                    { label: "Competitions", icon: Trophy, active: false },
-                    { label: "Events", icon: Calendar, active: false },
-                    { label: "Groups", icon: Globe, active: false },
-                  ].map((item, i) => (
-                    <div
-                      key={i}
-                      className={`flex items-center gap-2 px-2 py-1.5 rounded-md text-[11px] ${item.active ? "bg-accent/20 text-accent font-semibold" : "text-muted-foreground"}`}
-                      data-testid={`sidebar-item-${i}`}
-                    >
-                      <item.icon className="w-3.5 h-3.5" />
-                      {item.label}
-                    </div>
-                  ))}
-                  <div className="mt-auto flex items-center gap-2 px-2 py-1.5 text-[11px] text-muted-foreground">
-                    <Settings className="w-3.5 h-3.5" />
-                    Settings
-                  </div>
-                </div>
-                <div className="flex-1 p-4 space-y-3">
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-1.5 flex-1 max-w-[180px] px-2.5 py-1.5 rounded-full bg-secondary/80 border border-border/60 text-[10px] text-muted-foreground">
-                      <Search className="w-3 h-3" />
-                      Search members...
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Bell className="w-3.5 h-3.5 text-muted-foreground" />
-                      <div className="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-[9px] font-bold">AW</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-sm font-bold">Members</div>
-                      <div className="text-[10px] text-muted-foreground">Manage your community roster</div>
-                    </div>
-                    <div className="px-2.5 py-1 rounded-full bg-accent text-accent-foreground text-[10px] font-semibold">+ Add Member</div>
-                  </div>
-                  <div className="grid grid-cols-3 gap-2">
-                    <div className="rounded-lg border border-border/60 bg-secondary/40 p-2.5" data-testid="stat-members">
-                      <div className="text-[9px] uppercase tracking-wide text-muted-foreground mb-1">Active Members</div>
-                      <div className="text-lg font-bold leading-none">1,247 <span className="text-[9px] font-semibold text-accent align-middle">+12</span></div>
-                    </div>
-                    <div className="rounded-lg border border-border/60 bg-secondary/40 p-2.5" data-testid="stat-events">
-                      <div className="text-[9px] uppercase tracking-wide text-muted-foreground mb-1">Events This Month</div>
-                      <div className="text-lg font-bold leading-none">9 <span className="text-[9px] font-semibold text-accent align-middle">+3</span></div>
-                    </div>
-                    <div className="rounded-lg border border-border/60 bg-secondary/40 p-2.5" data-testid="stat-groups">
-                      <div className="text-[9px] uppercase tracking-wide text-muted-foreground mb-1">Groups</div>
-                      <div className="text-lg font-bold leading-none">156 <span className="text-[9px] font-semibold text-accent align-middle">+4</span></div>
-                    </div>
-                  </div>
-                  <div className="rounded-lg border border-border/60 overflow-hidden">
-                    <div className="grid grid-cols-[1fr_auto_auto] items-center gap-2 px-3 py-1.5 bg-secondary/60 text-[9px] uppercase tracking-wide text-muted-foreground">
-                      <span>Member</span>
-                      <span>Status</span>
-                      <span></span>
-                    </div>
-                    {[
-                      { name: "James Turner", initials: "JT", status: "Active" },
-                      { name: "Sarah Mills", initials: "SM", status: "Active" },
-                      { name: "David Lowe", initials: "DL", status: "Pending" },
-                      { name: "Rory Kane", initials: "RK", status: "Active" },
-                    ].map((member, i) => (
-                      <div key={i} className="grid grid-cols-[1fr_auto_auto] items-center gap-2 px-3 py-2 border-t border-border/40" data-testid={`member-row-${i}`}>
-                        <div className="flex items-center gap-2">
-                          <div className="w-5 h-5 rounded-full bg-muted flex items-center justify-center text-[8px] font-bold text-muted-foreground">{member.initials}</div>
-                          <span className="text-[11px] font-medium">{member.name}</span>
-                        </div>
-                        <span className={`px-2 py-0.5 rounded-full text-[9px] font-semibold ${member.status === "Active" ? "bg-accent/20 text-accent" : "bg-amber-400/20 text-amber-400"}`}>{member.status}</span>
-                        <MoreHorizontal className="w-3.5 h-3.5 text-muted-foreground" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/60 glow-effect">
+              <img
+                src={heroAppPath}
+                alt="Tribal18 mobile app screens showing feed, events, course map, and member profiles"
+                className="w-full h-auto"
+                data-testid="img-hero-app"
+              />
             </div>
           </div>
         </div>

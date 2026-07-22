@@ -6,6 +6,7 @@ Tribal18 (formerly Orbit8) is a community management platform designed for clubs
 
 ## Recent Changes
 
+- **July 2026**: Replaced the hero dashboard mockup (coded admin dashboard preview) with an attached image of four Tribal18 mobile app screens (attached_assets/image_1784735263353.png), keeping the rounded frame, border, and green glow; removed the now-unused lucide icon imports (LayoutDashboard, Trophy, Settings, Search, Bell, MoreHorizontal)
 - **July 2026**: Changed hero heading from "All-in-One Community Empowerment & Management Platform" to "Built to Help Your Community Flourish" ("Community" in sky blue, "Flourish" in emerald green gradient accents)
 - **July 2026**: Increased contrast of the Create Account card against the dark page background: card surface lifted from bg-card (8% lightness) to bg-secondary (12%) with a visible border (applies to both the onboarding wizard card and the creating/ready card)
 - **July 2026**: Fixed light-grey page backgrounds on Create Account and Admin Login pages: replaced leftover light pastel gradients (emerald-50/sky-50 and slate-50) with the standard dark bg-background so the header matches the main page
