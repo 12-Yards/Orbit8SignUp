@@ -6,7 +6,7 @@ Tribal18 (formerly Orbit8) is a community management platform designed for clubs
 
 ## Recent Changes
 
-- **July 2026**: Changed the features section subheading from "Everything your administrators need to grow, engage and manage your community" to "A platform that carries your brand, run by your own team, built around your members" to fit the "Own the Experience. Build the Community." heading
+- **July 2026**: Changed the features section subheading from "Everything your administrators need to grow, engage and manage your community" to "A platform that carries your brand, run by your own team, built around your members", then to "One platform. Every tool your community needs."
 - **July 2026**: Changed the features section heading from "Your community, your brand, your platform" to "Own the Experience. Build the Community."
 - **July 2026**: Changed the features section badge from "Community Platform" (globe icon) to "Fully Branded & Customisable" (palette icon) to match the section's branding-focused content
 - **July 2026**: Adjusted the features section headings to fit the new description: heading changed from "Build a thriving online community" to "Your community, your brand, your platform" and subheading from "Everything You Need to Grow, Engage, and Manage Your Community" to "Everything your administrators need to grow, engage and manage your community"
