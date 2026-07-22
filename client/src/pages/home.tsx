@@ -154,7 +154,7 @@ function FeaturesSection() {
                 Everything You Need to Grow, Engage, and Manage Your Community
               </h3>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed" data-testid="text-features-description">
-                Tribal18 is a modern community software platform designed for societies, content creators and independent communities looking to increase engagement, participation, and revenue.
+                Fully branded, fully customisable and managed by your own administrators, Tribal18 provides all the tools to grow and run your community from a single platform.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mt-8">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
