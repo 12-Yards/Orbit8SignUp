@@ -14,7 +14,8 @@ import {
   TrendingUp,
   CheckCircle,
   ArrowRight,
-  Play
+  Play,
+  Palette
 } from "lucide-react";
 
 function Header() {
@@ -144,8 +145,8 @@ function FeaturesSection() {
           <Card className="relative border-0 bg-gradient-to-br from-card/80 to-card shadow-lg">
             <CardContent className="p-8 md:p-12 text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-medium mb-6">
-                <Globe className="w-4 h-4" />
-                Community Platform
+                <Palette className="w-4 h-4" />
+                Fully Branded &amp; Customisable
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text" data-testid="heading-features">
                 Your community, your brand, your platform
