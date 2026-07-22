@@ -57,9 +57,9 @@ function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight" data-testid="heading-hero">
-              All-in-One Community{" "}
-              <span className="bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">Empowerment</span> &{" "}
-              <span className="bg-gradient-to-r from-sky-600 to-sky-500 bg-clip-text text-transparent">Management</span> Platform
+              Built to Help Your{" "}
+              <span className="bg-gradient-to-r from-sky-600 to-sky-500 bg-clip-text text-transparent">Community</span>{" "}
+              <span className="bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">Flourish</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl leading-relaxed" data-testid="text-hero-description">
               Tribal18 helps communities to connect members, manage events and competitions, share content, and provide specific features for different community types — all from one powerful platform.
