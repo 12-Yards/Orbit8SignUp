@@ -258,7 +258,7 @@ function PricingSection() {
                 ))}
               </div>
               <Link href="/create-account">
-                <Button variant="outline" className="w-full mt-auto" data-testid="button-get-started-free">Get Started Free</Button>
+                <Button variant="outline" className="w-full mt-auto" data-testid="button-get-started-free">Go Live Now - pay nothing for 30 days</Button>
               </Link>
             </CardContent>
           </Card>
@@ -281,7 +281,7 @@ function PricingSection() {
                 ))}
               </div>
               <Link href="/create-account">
-                <Button className="w-full mt-auto" data-testid="button-start-trial-pro">Go Live Now</Button>
+                <Button className="w-full mt-auto" data-testid="button-start-trial-pro">Go Live Now - pay nothing for 30 days</Button>
               </Link>
             </CardContent>
           </Card>
